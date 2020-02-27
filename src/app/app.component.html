@@ -1,0 +1,85 @@
+<style>
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px; /* Set the fixed height of the footer here */
+  background-color: #f5f5f5;
+  text-align:center;}
+
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.6;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.navbar-toggler .collapsing  {
+transition:1s transform ease-in-out;
+}
+
+navbar-toggler .collapse.show {
+transition:1s transform ease-in-out;
+}
+
+.collapse {
+transition:1s transform ease-in-out;
+}
+
+</style>
+
+
+<nav class="navbar sticky-top navbar-expand-sm navbar-dark"  style="background-color:grey;" >
+  <a class="navbar-brand" href="/home">AMAR OPTICALS&reg;</a>
+  <button class="navbar-toggler" type="button" (click)="isShown = !isShown" [attr.aria-expanded]="!isShown" data-toggle="collapse"  data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav"  [ngbCollapse]="isShown">
+   <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active" href="#" (click)="isShown = !isShown" ><span class="fa fa-home"></span>	</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/eye-appointment" routerLinkActive="active"  (click)="isShown = !isShown"><span class="fa fa-eye"> </span>Testing Appointment</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" routerLink="/offers-discounts" routerLinkActive="active" href="#" (click)="isShown = !isShown">Offers & Discounts<span class="fa fa-tags"> </span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active"href="#" (click)="isShown = !isShown">Contact<span class="fa fa-mobile"> </span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  
+
+<router-outlet></router-outlet>
+
+<footer class="footer mt-auto">
+        Copyright&reg;2020. All rights resvered. Follow us on 
+		<br/><a href="https://www.facebook.com/amaropticalskorba" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/amaropticalskorba" class="fa fa-instagram"></a>
+      
+    </footer>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
